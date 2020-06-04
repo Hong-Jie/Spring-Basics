@@ -6,8 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 import app.cars.Corolla;
 import app.cars.Cx5;
-import app.engines.V6;
-import app.engines.V8;
+import app.engines.EngineType;
 
 @Configuration
 @ComponentScan("app")
@@ -23,13 +22,9 @@ public class AppConfig {
 		return new Cx5();
 	}
 	
-	@Bean("enginev6")
-	public V6 v6() {
-		return new V6();
+	@Bean("engineType")
+	public EngineType engineType() {
+		return new EngineType("V8");
 	}
 	
-	@Bean("enginev8")
-	public V8 v8() {
-		return new V8();
-	}
 }
